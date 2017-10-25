@@ -5,20 +5,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wix/react-native-keyboard-aware-scrollview.git"
+    "url": "https://github.com/timglenn123/react-native-keyboard-aware-scrollview.git"
   },
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "React Native Keyboard Aware ScrollView - auto adjust content ScrollView",
   "nativePackage": true,
   "bugs": {
     "url": "https://github.com/wix/react-native-keyboard-aware-scrollview/issues"
   },
-  "homepage": "https://github.com/wix/react-native-keyboard-aware-scrollview",
+  "homepage": "https://github.com/timglenn123/react-native-keyboard-aware-scrollview",
   "main": "index.js",
   "author": "Artal Druk <artald@wix.com>",
   "license": "MIT",
   "peerDependencies": {
     "react-native": ">=0.25.1",
     "react": ">=0.14.5"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
   }
 }

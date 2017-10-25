@@ -1,28 +1,28 @@
+import React from "react";
+import PropTypes from "prop-types";
 
-import React, {PropTypes} from 'react';
+import { ListView } from "react-native";
 
-import {
-  ListView
-} from 'react-native';
-
-import KeyboardAwareBase from './KeyboardAwareBase'
+import KeyboardAwareBase from "./KeyboardAwareBase";
 
 export default class KeyboardAwareListView extends KeyboardAwareBase {
   render() {
     const initialOpacity = this.props.startScrolledToBottom ? 0 : 1;
     return (
-      <ListView {...this.props} {...this.style}
+      <ListView
+        {...this.props}
+        {...this.style}
         opacity={initialOpacity}
-        contentInset={{bottom: this.state.keyboardHeight}}
-        ref={(r) => {
+        contentInset={{ bottom: this.state.keyboardHeight }}
+        ref={r => {
           this._keyboardAwareView = r;
         }}
-        onLayout={(layoutEvent) => {
+        onLayout={layoutEvent => {
           this._onKeyboardAwareViewLayout(layoutEvent.nativeEvent.layout);
         }}
-        onScroll={(event) => {
+        onScroll={event => {
           this._onKeyboardAwareViewScroll(event.nativeEvent.contentOffset);
-          if(this.props.onScroll) {
+          if (this.props.onScroll) {
             this.props.onScroll(event);
           }
         }}
